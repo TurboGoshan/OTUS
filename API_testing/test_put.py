@@ -3,9 +3,9 @@ import json
 import jsonpath
 
 # API URL
-url = "https://reqres.in/api/users"
+url = "https://reqres.in/api/users/2"
 # Open save file on PC
-file = open("C:\\otus-qa-course\\user.json", "r")
+file = open("C:\\otus-qa-course\\API_testing\\user.json", "r")
 # Read json file
 json_input = file.read()
 # Transfer file to json
