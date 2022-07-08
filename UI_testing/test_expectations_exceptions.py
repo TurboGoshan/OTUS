@@ -47,3 +47,12 @@ def test_visible(browser):
     but1 = browser.find_element(By.CLASS_NAME, 'bg-success')
     # Сравниваем текст на кнопке
     assert but1.text == 'Data calculated on the client side.'
+
+
+# Тест с исключение ошибки
+def test_exception(browser):
+    browser.get(Page.url8)
+    try:
+        browser.find_element(By.CSS_SELECTOR, 'button[class="btn btn-primary1"]').click()
+    except Exception:
+        print("BUTTON_1 MISSING!")
