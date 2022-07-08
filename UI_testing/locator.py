@@ -7,6 +7,8 @@ class Page:
     url4 = "https://sketch.io/sketchpad/en/"
     url5 = "https://demoqa.com/alerts"
     url6 = "https://pagination.js.org/"
+    url7 = "http://uitestingplayground.com/"
+    url8 = "http://uitestingplayground.com/clientdelay"
     # Header
     Header_CSS = "div[class='site-header-root']"
     # Items of menu
