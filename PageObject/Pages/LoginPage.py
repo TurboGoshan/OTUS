@@ -9,6 +9,7 @@ class Login:
         self.browser = browser
 
     def open(self):
+        self.browser.maximize_window()
         self.browser.get(Data.url)
         self.browser.implicitly_wait(20)
 
@@ -19,6 +20,10 @@ class Login:
     def input_password(self):
         self.browser.find_element(By.CSS_SELECTOR, Data.password_field['css']).clear()
         self.browser.find_element(By.CSS_SELECTOR, Data.password_field['css']).send_keys(Data.password)
+
+    def input_invalid_pass(self):
+        self.browser.find_element(By.CSS_SELECTOR, Data.password_field['css']).clear()
+        self.browser.find_element(By.CSS_SELECTOR, Data.password_field['css']).send_keys(Data.invalid_password)
 
     def click_login_button(self):
         self.browser.find_element(By.CSS_SELECTOR, Data.button_login['css']).click()

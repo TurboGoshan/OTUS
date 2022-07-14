@@ -1,5 +1,5 @@
-from LoginPage import Login
-from InfoPage import Info
+from Pages.LoginPage import Login
+from Pages.InfoPage import Info
 
 
 def test_title(browser):
