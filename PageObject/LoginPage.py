@@ -1,5 +1,6 @@
 from locator import Data
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class Login:
@@ -9,6 +10,7 @@ class Login:
 
     def open(self):
         self.browser.get(Data.url)
+        self.browser.implicitly_wait(20)
 
     def input_login(self):
         self.browser.find_element(By.CSS_SELECTOR, Data.login_field['css']).clear()
